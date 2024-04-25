@@ -15,7 +15,7 @@ class UsersCubit extends Cubit<UsersState> {
 
   List<UsersData> animalsDate = [];
 
-  int limit = 15;
+  int limit = 5;
   int pageNo = 1;
   bool hasMore = true;
   bool isLoaded = false;
