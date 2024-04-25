@@ -1,6 +1,4 @@
 class Routes {
-  static const String splashScreen = "/";
-  static const String loginScreen = "/loginScreen";
-  static const String animalsScreen = "/animalsScreens";
-  static const String animalsDetailsScreen = "/animalsDetailsScreen";
+  static const String loginScreen = "/";
+  static const String usersScreen = "/usersScreen";
 }

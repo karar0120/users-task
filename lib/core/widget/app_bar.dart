@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pets_finder/core/helper/extensions.dart';
-import 'package:pets_finder/core/helper/values_manger.dart';
-import 'package:pets_finder/core/theming/styles.dart';
+import 'package:users_tasks/core/helper/extensions.dart';
+import 'package:users_tasks/core/helper/values_manger.dart';
+import 'package:users_tasks/core/theming/styles.dart';
 
 class GeneralAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
