@@ -9,9 +9,11 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: GeneralAppBar(
         title: Text(AppString.login),
         centerTitle: true,
+        leading: SizedBox(),
       ),
       body: LoginContent(),
     );

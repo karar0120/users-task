@@ -8,6 +8,7 @@ import 'package:users_tasks/core/networking/api_service.dart';
 import 'package:users_tasks/core/networking/dio_factory.dart';
 import 'package:users_tasks/core/networking/netwotk_info.dart';
 import 'package:users_tasks/features/login/data/repos/login_repo.dart';
+import 'package:users_tasks/features/login/logic/cubit/login_cubit.dart';
 import 'package:users_tasks/features/users/data/repos/irepository.dart';
 import 'package:users_tasks/features/users/domain/repository/users_repo.dart';
 import 'package:users_tasks/features/users/domain/use_case/users.dart';
@@ -32,8 +33,8 @@ Future<void> setupGetIt() async {
   // login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(
       getIt<ApiService>(), getIt<AppPreferences>(), getIt<NetworkInfo>()));
-
-  //get animals
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
+  //get users
 
   getIt.registerLazySingleton<UsersRepository>(() => UsersRepo(
         getIt<ApiService>(),

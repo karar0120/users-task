@@ -33,7 +33,7 @@ class UsersCard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        AppString.name,
+                        AppString.firstName,
                         style: TextStyles.font16WhiteSemiBold,
                       ),
                       horizontalSpace(AppSize.s8),
@@ -52,7 +52,7 @@ class UsersCard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        AppString.gender,
+                        AppString.lastName,
                         style: TextStyles.font16WhiteSemiBold,
                       ),
                       horizontalSpace(AppSize.s8),
@@ -71,7 +71,7 @@ class UsersCard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        AppString.type,
+                        AppString.email,
                         style: TextStyles.font16WhiteSemiBold,
                       ),
                       horizontalSpace(AppSize.s8),

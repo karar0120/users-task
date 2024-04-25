@@ -37,7 +37,7 @@ class _UsersScreenState extends State<UsersScreen> {
     return Scaffold(
       appBar: const GeneralAppBar(
         title: Text(AppString.users),
-        leading: SizedBox.shrink(),
+        centerTitle: true,
       ),
       body: RefreshIndicator(
         onRefresh: () {

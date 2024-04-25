@@ -18,7 +18,7 @@ class UsersApp extends StatelessWidget {
         title: AppString.users,
         debugShowCheckedModeBanner: false,
         theme: themeData,
-        initialRoute: Routes.usersScreen,
+        initialRoute: Routes.loginScreen,
         onGenerateRoute: AppRoute.generateRoute,
       ),
     );
