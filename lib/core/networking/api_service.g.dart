@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://api.petfinder.com/v2/';
+    baseUrl ??= 'https://reqres.in/api/';
   }
 
   final Dio _dio;
@@ -49,25 +49,25 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<AnimalsResponse> getAnimals(
-    GetAnimalsQueryParams getAnimalsQueryParams,
+  Future<UsersResponse> getUsers(
+    GetUsersQueryParams getUsersQueryParams,
     String token,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    queryParameters.addAll(getAnimalsQueryParams.toJson());
+    queryParameters.addAll(getUsersQueryParams.toJson());
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<AnimalsResponse>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<UsersResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'animals',
+              'users',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -76,38 +76,7 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = AnimalsResponse.fromJson(_result.data!);
-    return value;
-  }
-
-  @override
-  Future<AnimalsDetailsResponse> getAnimalsDetails(
-    int id,
-    String token,
-  ) async {
-    final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{r'Authorization': token};
-    _headers.removeWhere((k, v) => v == null);
-    const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<AnimalsDetailsResponse>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'animals/${id}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = AnimalsDetailsResponse.fromJson(_result.data!);
+    final value = UsersResponse.fromJson(_result.data!);
     return value;
   }
 

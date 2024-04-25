@@ -1,7 +1,7 @@
 import 'package:jwt_decoder/jwt_decoder.dart';
-import 'package:pets_finder/core/helper/extensions.dart';
-import 'package:pets_finder/core/networking/cache_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:users_tasks/core/helper/extensions.dart';
+import 'package:users_tasks/core/networking/cache_constants.dart';
 
 class AppPreferences {
   final SharedPreferences sharedPreferences;

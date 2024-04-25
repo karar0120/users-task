@@ -1,12 +1,11 @@
-import 'package:pets_finder/core/helper/constances.dart';
-import 'package:pets_finder/core/helper/shared_preferences.dart';
-import 'package:pets_finder/core/networking/api_constants.dart';
-import 'package:pets_finder/core/networking/api_error_handler.dart';
-import 'package:pets_finder/core/networking/api_result.dart';
-import 'package:pets_finder/core/networking/api_service.dart';
-import 'package:pets_finder/core/networking/netwotk_info.dart';
-import 'package:pets_finder/features/login/data/models/login_request_body.dart';
-import 'package:pets_finder/features/login/data/models/login_response.dart';
+import 'package:users_tasks/core/helper/constances.dart';
+import 'package:users_tasks/core/helper/shared_preferences.dart';
+import 'package:users_tasks/core/networking/api_error_handler.dart';
+import 'package:users_tasks/core/networking/api_result.dart';
+import 'package:users_tasks/core/networking/api_service.dart';
+import 'package:users_tasks/core/networking/netwotk_info.dart';
+import 'package:users_tasks/features/login/data/models/login_request_body.dart';
+import 'package:users_tasks/features/login/data/models/login_response.dart';
 
 class LoginRepo {
   final ApiService _apiService;
@@ -20,8 +19,8 @@ class LoginRepo {
         final response = await _apiService.login(
           LoginRequestBody(
               grantType: Constances.clientCredentials,
-              clientId: ApiConstants.clientId,
-              clientSecret: ApiConstants.clientSecret),
+              clientId: "",
+              clientSecret: ""),
         );
 
         await _appPreferences.setAccessToken(

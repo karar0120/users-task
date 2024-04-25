@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:pets_finder/core/helper/image_manger.dart';
-import 'package:pets_finder/core/helper/values_manger.dart';
-import 'package:pets_finder/core/theming/color.dart';
+import 'package:users_tasks/core/helper/image_manger.dart';
+import 'package:users_tasks/core/helper/values_manger.dart';
+import 'package:users_tasks/core/theming/color.dart';
 
 class CachedImage extends StatelessWidget {
   final String imageUrl;

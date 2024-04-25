@@ -1,12 +1,7 @@
 class ApiConstants {
-  static const String baseUrl = "https://api.petfinder.com/v2/";
+  static const String baseUrl = "https://reqres.in/api/";
   static const String login = "oauth2/token";
-  static const String animals = "animals";
-  static const String animalsDetails = 'animals/{id}';
-
-  static const String clientId =
-      'JwsIhhsuzL7Ga4y7Hkx3YSAVHKzbqsxiHuiXrcHvGi87Vu05Gq';
-  static const String clientSecret = 'NgYQmGhwAmD03y9gz4BGe7yxfo0a7zWXVxoYNCP6';
+  static const String users = "users";
 }
 
 class ApiErrors {
